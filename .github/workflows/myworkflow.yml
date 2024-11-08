@@ -1,0 +1,10 @@
+name: Good
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Good
+        run: curl https://actions.ctf.cert.unlp.edu.ar/
