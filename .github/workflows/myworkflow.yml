@@ -1,10 +1,14 @@
 name: Good
 on:
   workflow_dispatch:
+    inputs:
+      good:
+        required: true
+        default: 'https://actions.ctf.cert.unlp.edu.ar/'
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
       - name: Good
-        run: curl https://actions.ctf.cert.unlp.edu.ar/
+        run: curl ${{ github.event.inputs.good }}
